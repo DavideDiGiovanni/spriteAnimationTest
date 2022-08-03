@@ -1,3 +1,9 @@
+let playerState = 'run';
+const dropdown = document.getElementById('animations');
+dropdown.addEventListener('change', function(e) {
+    playerState = e.target.value;
+});
+
 const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
 console.log(ctx);
@@ -11,8 +17,6 @@ const spriteWidth = 575;
 const spriteHeight = 523;
 
 let gameFrame = 0;
-
-let playerState = 'run';
 
 const staggerFrames = 5;
 const spriteAnimations = [];
